@@ -1,0 +1,21 @@
+<%= simple_form_for @flat do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :name %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :address %>
+    </div>
+  </div>
+  <%= f.input :description, as: :text %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :price_per_night %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :number_of_guests %>
+    </div>
+  </div>
+  <%= f.submit class: "btn btn-primary" %>
+  <%= link_to "Back", flats_path, class: "btn btn-link" %>
+<% end %>
